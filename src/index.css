@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #850AD6;
+  --color-primary-dark: #4F1562;
+  --color-bg: #FFFFFF;
+  --color-surface: #F7F4FA;
+  --color-text: #1E1B22;
+  --color-text-muted: #6B6470;
+  --color-border: #E8E2EE;
+  --color-header-bg: #FFFFFF;
+  --color-shadow: rgba(133, 10, 214, 0.08);
+}
+[data-theme='dark'] {
+  --color-primary: #B266F0;
+  --color-primary-dark: #850AD6;
+  --color-bg: #14101A;
+  --color-surface: #1E1826;
+  --color-text: #F2ECF8;
+  --color-text-muted: #A79FB2;
+  --color-border: #2E2738;
+  --color-header-bg: #1A1424;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+}
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; margin: 0; padding: 0; }
+body { background: var(--color-bg); color: var(--color-text); font-family: 'Urbanist', 'Roboto', system-ui, sans-serif; transition: background-color .25s ease, color .25s ease; -webkit-font-smoothing: antialiased; }
+button, input { font-family: inherit; }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

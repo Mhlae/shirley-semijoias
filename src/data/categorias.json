@@ -1,0 +1,11 @@
+[
+  { "id": 1,  "nome": "CONJUNTOS",                    "imagem": "https://cdn.vendizap.com/vendizap-categorias/95b755dcfb521ba4ed168d678e229139.webp" },
+  { "id": 2,  "nome": "BRINCOS",                      "imagem": "https://cdn.vendizap.com/vendizap-categorias/df05d1fdcf8fdc6e573a05518c8f81a0.webp" },
+  { "id": 3,  "nome": "ANÉIS",                        "imagem": "https://cdn.vendizap.com/vendizap-categorias/6d5ae1e172f4cf3521285ae66934c701.webp" },
+  { "id": 4,  "nome": "LINHA LUXO",                   "imagem": "https://cdn.vendizap.com/vendizap-categorias/f7facac42056007ba94bf55254c5d61f.webp" },
+  { "id": 5,  "nome": "COLARES",                      "imagem": "https://cdn.vendizap.com/vendizap-categorias/13f66c8c676a98ff2b47f69e5bb40f4f.webp" },
+  { "id": 6,  "nome": "TORNOZELEIRAS",                "imagem": "https://cdn.vendizap.com/vendizap-categorias/1410c8e2fb4ff3086fce5a2347f52cc6.webp" },
+  { "id": 7,  "nome": "TRIOS / DUPLAS",               "imagem": "https://cdn.vendizap.com/vendizap-categorias/9763d2c4d76ec8d8c909ff899d40feda.webp" },
+  { "id": 8,  "nome": "PULSEIRAS/BRACELETES",         "imagem": "https://cdn.vendizap.com/vendizap-categorias/5f03af4f72086344d5d6ef1b0a8ca33e.webp" },
+  { "id": 9,  "nome": "ANTIALÉRGICOS",                "imagem": "https://cdn.vendizap.com/vendizap-categorias/b69a98405c24443472d028357c904d7e.webp" }
+]
