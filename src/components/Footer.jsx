@@ -10,15 +10,7 @@ function Footer() {
         </div>
         <div className="footer__col">
           <h2 className="footer__title">Contato</h2>
-          <a href="https://wa.me/5500000000000">WhatsApp: (00) 00000-0000</a>
-          <a href="tel:+5500000000000">Telefone: (00) 0000-0000</a>
-          <a href="mailto:contato@shirley.com">contato@shirley.com</a>
-        </div>
-        <div className="footer__col">
-          <h2 className="footer__title">Links úteis</h2>
-          <a href="#categorias-title">Categorias</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#atendimento">Fale conosco</a>
+          <a href="https://wa.me/551399733-5930">WhatsApp: (13) 99733-5930</a>
         </div>
         <div className="footer__col">
           <h2 className="footer__title">Segurança</h2>
