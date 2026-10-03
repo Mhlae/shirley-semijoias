@@ -16,8 +16,6 @@ function Header({ searchTerm, onSearchChange }) {
         </label>
         <nav className="header__actions" aria-label="Ações da loja">
           <ThemeToggle />
-          <button type="button" className="header__icon-btn" aria-label="Informações">ⓘ</button>
-          <button type="button" className="header__icon-btn" aria-label="Carrinho">♧</button>
         </nav>
       </div>
     </header>
