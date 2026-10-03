@@ -1,6 +1,6 @@
 import './ProductGrid.css'
 
-function ProductGrid({ produtos, searchTerm, categoriaAtiva, onLimparFiltro }) {
+function ProductGrid({ produtos, searchTerm, categoriaAtiva, onVoltar, produtosSelecionados, onAlternarSelecao }) {
   const normalizedSearch = searchTerm.trim().toLocaleLowerCase()
   const produtosVisiveis = produtos.filter((produto) => (
     !normalizedSearch || produto.nome.toLocaleLowerCase().includes(normalizedSearch)
@@ -8,6 +8,9 @@ function ProductGrid({ produtos, searchTerm, categoriaAtiva, onLimparFiltro }) {
 
   return (
     <section className="products" id="produtos" aria-labelledby="products-title">
+      <button type="button" className="products__back-btn" onClick={onVoltar} aria-label="Voltar para categorias">
+        &lt;
+      </button>
       <div className="section-heading products__header">
         <div>
           <p className="eyebrow">Seleção Shirley</p>
@@ -15,17 +18,28 @@ function ProductGrid({ produtos, searchTerm, categoriaAtiva, onLimparFiltro }) {
         </div>
         <div className="products__controls">
           <span className="product-count">{produtosVisiveis.length} peças</span>
-          {categoriaAtiva && (
-            <button type="button" className="products__clear-btn" onClick={onLimparFiltro}>
-              Ver todos
-            </button>
-          )}
         </div>
       </div>
       {produtosVisiveis.length > 0 ? (
         <div className="products__grid">
           {produtosVisiveis.map((produto) => (
-            <article key={produto.id} className="product-card">
+            <article
+              key={produto.id}
+              className={`product-card${produtosSelecionados.has(produto.id) ? ' product-card--selected' : ''}`}
+              role="button"
+              tabIndex={0}
+              aria-pressed={produtosSelecionados.has(produto.id)}
+              onClick={() => onAlternarSelecao(produto.id)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  onAlternarSelecao(produto.id)
+                }
+              }}
+            >
+              {produtosSelecionados.has(produto.id) && (
+                <span className="product-card__check" aria-hidden="true">✓</span>
+              )}
               <div className="product-card__image-wrap">
                 <img src={produto.imagem} alt={produto.nome} loading="lazy" />
               </div>

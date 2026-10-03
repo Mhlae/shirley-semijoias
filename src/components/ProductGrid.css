@@ -1,11 +1,17 @@
 .products { margin-top: 8px; }
+.products__back-btn { display: grid; width: 40px; height: 40px; margin: 0 0 16px; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; background: var(--color-surface); color: var(--color-text); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.products__back-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .products__header { flex-wrap: wrap; }
 .products__controls { display: flex; align-items: center; gap: 12px; }
 .products__clear-btn { padding: 8px 14px; border: 1px solid var(--color-primary); border-radius: 999px; background: var(--color-surface); color: var(--color-primary); font-size: .85rem; font-weight: 600; }
 .products__clear-btn:hover { background: var(--color-primary); color: #fff; }
 .products__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
-.product-card { overflow: hidden; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-surface); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.product-card { position: relative; overflow: hidden; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-surface); cursor: pointer; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .product-card:hover { border-color: var(--color-primary); box-shadow: 0 12px 28px var(--color-shadow); transform: translateY(-4px); }
+.product-card:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }
+.product-card--selected { z-index: 1; border-color: #26834a; box-shadow: 0 8px 24px rgba(38, 131, 74, .2); transform: scale(1.02); }
+.product-card--selected:hover { border-color: #26834a; transform: translateY(-4px) scale(1.02); }
+.product-card__check { position: absolute; top: 10px; right: 10px; z-index: 1; display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: #26834a; color: #fff; font-size: 1rem; font-weight: 700; }
 .product-card__image-wrap { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; overflow: hidden; background: var(--color-bg); }
 .product-card__image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
 .product-card:hover .product-card__image-wrap img { transform: scale(1.05); }

@@ -1,4 +1,5 @@
 import './Footer.css'
+import { NUMERO_WHATSAPP } from '../constants'
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
         </div>
         <div className="footer__col">
           <h2 className="footer__title">Contato</h2>
-          <a href="https://wa.me/551399733-5930">WhatsApp: (13) 99733-5930</a>
+          <a href={`https://wa.me/${NUMERO_WHATSAPP}`}>WhatsApp: (13) 99733-5930</a>
         </div>
         <div className="footer__col">
           <h2 className="footer__title">Segurança</h2>
